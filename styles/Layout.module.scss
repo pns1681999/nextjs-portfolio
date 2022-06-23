@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&display=swap');
+
+.main {
+  display: flex;
+  background: #24292e;
+}
+
+.content {
+  padding: 2rem;
+  color: #efefef;
+  font-family: 'JetBrains Mono', monospace;
+  flex: 1;
+  height: 85vh;
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    padding: 2rem 1rem;
+  }
+}
