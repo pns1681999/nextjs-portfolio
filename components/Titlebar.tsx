@@ -30,7 +30,7 @@ const Titlebar: React.FC = () => {
           })
         }
       </div>
-      <p className={styles.title}>Pham Ngoc Son - Portfolio</p>
+      <p className={styles.title}>Son Pham - Portfolio</p>
       <div className={styles.windowButtons}>
         <span className={styles.minimize}></span>
         <span className={styles.maximize}></span>

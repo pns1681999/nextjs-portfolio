@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
+.container {
+  display: flex;
+  justify-content: center;
+  height: 75vh;
+  flex-direction: column;
+  position: relative;
+}
+
+.background {
+  font-size: 5rem;
+  font-family: 'Montserrat';
+  line-height: 1.1;
+  color: rgba(56, 58, 61, 0.35);
+  position: absolute;
+  z-index: 1;
+}
+
+.foreground {
+  z-index: 2;
+  display: flex;
+  color: #f9826c;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name {
+  color: #eee;
+  font-size: 3.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.bio {
+  width: max-content;
+  color: #eee;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.bio::before,
+.bio::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.bio::before {
+  background: #24292e;
+  animation: typewriter 2.5s steps(24) 500ms forwards;
+}
+
+.bio::after {
+  margin-left: 0.4rem;
+  width: 0.125em;
+  background: #f9826c;
+  animation: typewriter 2.5s steps(24) 500ms forwards,
+    blink 750ms steps(24) infinite;
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+.button {
+  background: #f9826c;
+  font-size: 1.25rem;
+  padding: 0.5rem 1rem;
+  margin-right: 1.5rem;
+  color: #eee;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.outlined {
+  font-size: 1.25rem;
+  padding: 0.5rem 1rem;
+  color: #eee;
+  border: 2px solid #f9826c;
+  background: transparent;
+  cursor: pointer;
+}
+
+.button:hover,
+.outlined:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.homeBackground {
+  height: 800px;
+  width: 600px;
+}
+
+/* 4K Screens */
+@media screen and (min-width: 2000px) {
+  .background {
+    font-size: 8.5rem;
+  }
+  .content {
+    padding: 0 3rem;
+  }
+  .name {
+    font-size: 6rem;
+  }
+  .bio {
+    font-size: 3rem;
+    margin-bottom: 5rem;
+  }
+  .button {
+    font-size: 2rem;
+  }
+  .outlined {
+    font-size: 2rem;
+  }
+  .homeBackground {
+    height: 900px;
+    width: 700px;
+  }
+}
+
+/* iPad Pro */
+@media screen and (max-width: 1100px) {
+  .background {
+    display: none;
+  }
+  .container {
+    display: block;
+  }
+  .foreground {
+    margin: 4rem 0;
+    display: block;
+    text-align: center;
+  }
+  .name {
+    font-size: 4rem;
+  }
+  .bio {
+    font-size: 1.75rem;
+    margin: 0.75rem auto 3rem;
+  }
+  .homeBackground {
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+    height: 700px;
+    width: 600px;
+  }
+}
+
+/* iPad */
+@media screen and (max-width: 900px) {
+  .foreground {
+    margin: 2rem 0;
+  }
+  .name {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  .bio {
+    font-size: 1.5rem;
+  }
+  .homeBackground {
+    width: 100%;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 1050px) {
+  .container {
+    display: flex;
+  }
+  .homeBackground {
+    display: none;
+  }
+}
+
+/* Phone */
+@media screen and (max-width: 600px) {
+  .foreground {
+    margin: 0;
+  }
+  .name {
+    font-size: 2rem;
+  }
+  .bio {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  .button {
+    font-size: 1rem;
+  }
+  .outlined {
+    font-size: 1rem;
+  }
+  .homeBackground {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+  }
+}

@@ -1,10 +1,13 @@
 import type { NextPage } from 'next'
-
+import Head from '../components/Head'
 const Contact: NextPage = () => {
   return (
-    <div>
-      Contact page
-    </div>
+    <>
+      <Head title="Son Pham | Contact"></Head>
+      <h1>
+        Contact page
+      </h1>
+    </>
   )
 }
 

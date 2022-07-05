@@ -1,10 +1,13 @@
 import type { NextPage } from 'next'
-
+import Head from '../components/Head'
 const Settings: NextPage = () => {
   return (
-    <div>
-      Settings page
-    </div>
+    <>
+      <Head title="Son Pham | Settings"></Head>
+      <h1>
+        Settings page
+      </h1>
+    </>
   )
 }
 

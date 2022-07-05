@@ -1,0 +1,18 @@
+@function get($map, $key) {
+  @if map-has-key($map, $key) {
+    @return map-get($map, $key);
+  }
+
+  @error 'Invalid key: `#{$key}` for map `#{$map}`';
+}
+
+@function get-color($namespace, $variance: normal) {
+  $color-map: get($color, $namespace);
+
+  @return get($color-map, $variance);
+}
+
+// Generic maps
+@function get-font-weight($key: m) { @return get($font-weight, $key); }
+@function get-font-size($key: m) { @return get($font-size, $key); }
+@function get-media($key: m) { @return get($media, $key); }
