@@ -4,6 +4,7 @@ import Sidebar from "../components/Sidebar"
 import Bottombar from "../components/Bottombar";
 import Explorer from "../components/Explorer";
 import styles from "../styles/Layout.module.scss";
+import Tabsbar from "./Tabsbar";
 type Props = {
   children: ReactNode;
 };
@@ -14,7 +15,10 @@ const Layout = ({ children }: Props) => {
       <div className={styles.main}>
         <Sidebar/>
         <Explorer/>
-        <div className={styles.content}>{children}</div>
+        <div style={{width: '100%'}}>
+          <Tabsbar />
+          <div className={styles.content}>{children}</div>
+        </div>
       </div>
       <Bottombar/>
     </>

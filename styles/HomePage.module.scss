@@ -20,7 +20,7 @@
 .foreground {
   z-index: 2;
   display: flex;
-  color: #f9826c;
+  color: var(--accent-color);
   justify-content: space-between;
   align-items: center;
 }
@@ -59,7 +59,7 @@
 .bio::after {
   margin-left: 0.4rem;
   width: 0.125em;
-  background: #f9826c;
+  background: var(--accent-color);
   animation: typewriter 2.5s steps(24) 500ms forwards,
     blink 750ms steps(24) infinite;
 }
@@ -77,10 +77,11 @@
 }
 
 .button {
-  background: #f9826c;
+  background: var(--accent-color);
   font-size: 1.25rem;
   padding: 0.5rem 1rem;
   margin-right: 1.5rem;
+  margin-bottom: 1rem;
   color: #eee;
   font-weight: 600;
   border: none;
@@ -91,7 +92,7 @@
   font-size: 1.25rem;
   padding: 0.5rem 1rem;
   color: #eee;
-  border: 2px solid #f9826c;
+  border: 2px solid var(--accent-color);
   background: transparent;
   cursor: pointer;
 }
@@ -102,7 +103,6 @@
 }
 
 .homeBackground {
-  height: 800px;
   width: 600px;
 }
 
@@ -128,7 +128,6 @@
     font-size: 2rem;
   }
   .homeBackground {
-    height: 900px;
     width: 700px;
   }
 }
@@ -154,11 +153,9 @@
     margin: 0.75rem auto 3rem;
   }
   .homeBackground {
-    position: absolute;
-    bottom: -50px;
-    right: 0;
-    height: 700px;
-    width: 600px;
+    margin: auto;
+    height: auto;
+    width: 450px;
   }
 }
 
@@ -182,9 +179,6 @@
 @media screen and (orientation: landscape) and (max-width: 1050px) {
   .container {
     display: flex;
-  }
-  .homeBackground {
-    display: none;
   }
 }
 

@@ -68,6 +68,7 @@ const Explorer = () => {
                 <Image
                   src={`/${item.icon}`}
                   alt={item.name}
+                  layout="fixed"
                   height={18}
                   width={18}
                 />{' '}
