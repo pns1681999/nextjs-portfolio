@@ -1,11 +1,9 @@
 import Link from 'next/link';
 import HomeBackground from '../components/HomeBackground';
 import styles from '../styles/HomePage.module.scss';
-import Head from '../components/Head';
 export default function HomePage() {
   return (
     <>
-      <Head title="Son Pham | Home page"></Head>
       <div className={styles.container}>
         <div className={styles.background}>
           <h1>VSCODE</h1>

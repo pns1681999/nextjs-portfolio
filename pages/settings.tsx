@@ -1,5 +1,4 @@
 import type { NextPage } from 'next'
-import Head from '../components/Head'
 import ThemeInfo from '../components/ThemeInfo'
 import styles from '../styles/Setting.module.scss'
 const Settings: NextPage = () => {
@@ -49,7 +48,6 @@ const Settings: NextPage = () => {
   ]
   return (
     <>
-      <Head title="Son Pham | Settings"></Head>
       <h1>
         Manager themes
       </h1>
@@ -71,5 +69,11 @@ const Settings: NextPage = () => {
     </>
   )
 }
-
+export async function getStaticProps() {
+  return {
+    props: {
+      title: 'Settings'
+    }
+  }
+}
 export default Settings

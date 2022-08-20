@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app'
 import '../styles/globals.scss'
 import '../styles/themes.scss';
 import { useEffect } from 'react';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -14,7 +15,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     }
   }, []);
   return (
-    <Layout>
+    <Layout>  
+      <Head>
+        <title>{`Son Pham | ${pageProps.title}`}</title>
+      </Head>
       <Component {...pageProps} />
     </Layout>
   )
