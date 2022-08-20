@@ -1,11 +1,12 @@
 import type { NextPage } from 'next'
+import ContactCode from '../components/ContactCode'
+import styles from '../styles/ContactPage.module.scss'
 const Contact: NextPage = () => {
   return (
-    <>
-      <h1>
-        Contact page
-      </h1>
-    </>
+    <div>
+        <div className={styles.comment}>{'/* Contact with me via */'}</div>
+        <ContactCode/>
+    </div>
   )
 }
 export async function getStaticProps() {
